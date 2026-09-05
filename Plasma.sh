@@ -14,17 +14,32 @@ case "$1" in
     ;;
 esac
 
+case "$2" in
+    blue)  AccentColor="61,174,233";;
+    pink)  AccentColor="233,58,154";;
+esac
+
 sudo apt install --no-install-recommends --no-install-suggests -y \
   papirus-icon-theme \
   bibata-cursor-theme
 
+# Global Theme
 plasma-apply-lookandfeel --apply "$LookAndFeel"
-plasma-apply-desktoptheme "$DesktopTheme"
-plasma-apply-colorscheme "$ColorScheme"
-plasma-apply-cursortheme "$CursorTheme"
 
+# Colors
+kwriteconfig6 --file kdeglobals --group General --key AccentColor "$AccentColor"
+plasma-apply-colorscheme "$ColorScheme"
+
+# Plasma Style
+plasma-apply-desktoptheme "$DesktopTheme"
+
+# Icons
 kwriteconfig6 --file kdeglobals --group Icons --key Theme Papirus-"$1"
 wget -qO- https://git.io/papirus-folders-install | sh
 papirus-folders --color "$2"
 
+# Cursors
+plasma-apply-cursortheme "$CursorTheme"
+
+# Splash Screen
 kwriteconfig6 --file ksplashrc --group KSplash --key Theme None
