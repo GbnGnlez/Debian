@@ -3,6 +3,7 @@
 
 case "$1" in
   ThinkPad)
+    ./ThinkPad.sh
     ./Plasma.sh Dark blue
     ./VSCode.sh
     ./Spotify.sh
