@@ -7,6 +7,7 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   kdeconnect \
   konsole \
   plasma-desktop \
+  kde-config-sddm \
   plasma-nm \
   plasma-pa \
   powerdevil \
