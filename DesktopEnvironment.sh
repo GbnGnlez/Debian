@@ -9,6 +9,7 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   plasma-nm \
   plasma-pa \
   powerdevil \
+  power-profiles-daemon \
   sddm \
   wireplumber \
   xdg-desktop-portal-kde
