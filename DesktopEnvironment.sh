@@ -6,7 +6,7 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   kde-spectacle \
   konsole \
   plasma-desktop \
-  kde-config-sddm \
+  sddm-theme-breeze \
   plasma-nm \
   plasma-pa \
   powerdevil \
