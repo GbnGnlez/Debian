@@ -1,3 +1,11 @@
-wget -O Spotify.deb "https://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.2.96.518.g366879e1_amd64.deb"
+# https://repository.spotify.com/dists/stable/non-free/binary-amd64/Packages
+# https://repository.spotify.com/pool/non-free/s/spotify-client/
+
+URL="https://repository.spotify.com/"
+Pkgs="dists/stable/non-free/binary-amd64/Packages"
+Repo="pool/non-free/s/spotify-client/spotify-client"
+Version=$(wget -O- "${URL}${Pkgs}" | awk -F_ '/spotify-client_/ {print $2}')
+
+wget -O Spotify.deb "${URL}${Repo}_${Version}_amd64.deb"
 sudo apt install --no-install-recommends --no-install-suggests ./Spotify.deb -y
 rm Spotify.deb
