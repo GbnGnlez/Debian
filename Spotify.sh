@@ -6,7 +6,7 @@ INSTALLED_VER=$(spotify --version 2>&1 | grep -oP 'version \K[0-9.a-z]+')
 URL="https://repository.spotify.com/"
 Pkgs="dists/stable/non-free/binary-amd64/Packages"
 Repo="pool/non-free/s/spotify-client/spotify-client"
-Version=$(wget -O- "${URL}${Pkgs}" | awk -F_ '/spotify-client_/ {print $2}')
+Version=$(wget -qO- "${URL}${Pkgs}" | awk -F_ '/spotify-client_/ {print $2}')
 
 
 if [ "$INSTALLED_VER" != "$Version" ]; then
