@@ -28,10 +28,10 @@ plasma-apply-lookandfeel --apply "$LookAndFeel"
 
 # Colors
 kwriteconfig6 --file kdeglobals --group General --key AccentColor "$AccentColor"
-plasma-apply-colorscheme "$ColorScheme"
+# plasma-apply-colorscheme "$ColorScheme"
 
 # Plasma Style
-plasma-apply-desktoptheme "$DesktopTheme"
+# plasma-apply-desktoptheme "$DesktopTheme"
 
 # Icons
 kwriteconfig6 --file kdeglobals --group Icons --key Theme Papirus-"$1"
