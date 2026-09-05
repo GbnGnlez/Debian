@@ -10,4 +10,6 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   plasma-pa \
   powerdevil \
   sddm \
-  wireplumber
+  wireplumber \
+  xdg-desktop-portal \
+  xdg-desktop-portal-kde
