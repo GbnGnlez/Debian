@@ -20,6 +20,8 @@ case "$2" in
 esac
 
 sudo apt install --no-install-recommends --no-install-suggests -y \
+  breeze-gtk-theme \
+  sddm-theme-breeze \
   papirus-icon-theme \
   bibata-cursor-theme
 
