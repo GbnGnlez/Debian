@@ -11,6 +11,6 @@ mkdir -p ~/.config/Code/User
 cat > ~/.config/Code/User/settings.json << 'EOF'
 {
     "editor.formatOnSave": true,
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true 
 }
 EOF
