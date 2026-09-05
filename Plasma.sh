@@ -1,29 +1,29 @@
 case "$1" in
-  Light)
-    LookAndFeel="org.kde.breeze.desktop"
-    DesktopTheme="breeze-light"
-    ColorScheme="BreezeLight"
-    CursorTheme="Bibata-Modern-Classic"
-    ;;
+	Light)
+		LookAndFeel="org.kde.breeze.desktop"
+		DesktopTheme="breeze-light"
+		ColorScheme="BreezeLight"
+		CursorTheme="Bibata-Modern-Classic"
+		;;
 
-  Dark)
-    LookAndFeel="org.kde.breezedark.desktop"
-    DesktopTheme="breeze-dark"
-    ColorScheme="BreezeDark"
-    CursorTheme="Bibata-Modern-Ice"
-    ;;
+	Dark)
+		LookAndFeel="org.kde.breezedark.desktop"
+		DesktopTheme="breeze-dark"
+		ColorScheme="BreezeDark"
+		CursorTheme="Bibata-Modern-Ice"
+		;;
 esac
 
 case "$2" in
-  blue) AccentColor="61,174,233" ;;
-  pink) AccentColor="233,58,154" ;;
+	blue) AccentColor="61,174,233" ;;
+	pink) AccentColor="233,58,154" ;;
 esac
 
 sudo apt install --no-install-recommends --no-install-suggests -y \
-  breeze-gtk-theme \
-  sddm-theme-breeze \
-  papirus-icon-theme \
-  bibata-cursor-theme
+	breeze-gtk-theme \
+	sddm-theme-breeze \
+	papirus-icon-theme \
+	bibata-cursor-theme
 
 # Global Theme
 plasma-apply-lookandfeel --apply "$LookAndFeel"
