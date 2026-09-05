@@ -28,7 +28,7 @@ plasma-apply-lookandfeel --apply "$LookAndFeel"
 
 # Colors
 kwriteconfig6 --file kdeglobals --group General --key AccentColor "$AccentColor"
-# plasma-apply-colorscheme "$ColorScheme"
+plasma-apply-colorscheme BreezeClassic
 
 # Plasma Style
 # plasma-apply-desktoptheme "$DesktopTheme"
