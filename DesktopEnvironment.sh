@@ -6,7 +6,6 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   kde-spectacle \
   kdeconnect \
   konsole \
-  papirus-icon-theme \
   plasma-desktop \
   plasma-nm \
   plasma-pa \
