@@ -6,3 +6,10 @@ rm VSCode.deb
 
 git config --global user.name "GbnGnlez"
 git config --global user.email "GbnGnlez@outlook.com"
+
+mkdir -p ~/.config/Code/User
+cat > ~/.config/Code/User/settings.json <<'EOF'
+{
+    "git.enableSmartCommit": true
+}
+EOF
