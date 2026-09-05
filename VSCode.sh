@@ -8,13 +8,9 @@ git config --global user.name "GbnGnlez"
 git config --global user.email "GbnGnlez@outlook.com"
 
 mkdir -p ~/.config/Code/User
-cat > ~/.config/Code/User/settings.json <<'EOF'
+cat >~/.config/Code/User/settings.json <<'EOF'
 {
-    "editor.formatOnSave": true,
-    "[shellscript]": {
-                 "editor.defaultFormatter": "mkhl.shfmt"
-             },
-    "shfmt.executablePath": "/usr/bin/shfmt"
+            "editor.formatOnSave": true,
+            "git.enableSmartCommit": true
 }
 EOF
- 
