@@ -1,7 +1,7 @@
 # https://github.com/ONLYOFFICE/DesktopEditors/releases/
 
 INSTALLED_VER=$(onlyoffice-desktopeditors --version 2>&1 | grep -oP '\d+\.\d+\.\d+')
-LATEST_VER=$(curl -sI "https://github.com/ONLYOFFICE/DesktopEditors/releases/latest" | grep -oP '/v\K\d+\.\d+\.\d+')
+LATEST_VER=$(curl -sI "https://github.com/ONLYOFFICE/DesktopEditors/releases/latest" | grep -oP 'tag/v\K[0-9.]+')
 
 if [ "$INSTALLED_VER" != "$LATEST_VER" ]; then
 	wget -qO OnlyOffice.deb "https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb"
