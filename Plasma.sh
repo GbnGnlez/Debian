@@ -5,6 +5,7 @@ case "$1" in
     ColorScheme="BreezeLight"
     CursorTheme="Bibata-Modern-Classic"
     ;;
+
   Dark)
     LookAndFeel="org.kde.breezedark.desktop"
     DesktopTheme="breeze-dark"
@@ -13,9 +14,13 @@ case "$1" in
     ;;
 esac
 
-sudo apt install --no-install-recommends --no-install-suggests bibata-cursor-theme -y
+sudo apt install --no-install-recommends --no-install-suggests -y \
+  papirus-icon-theme \
+  bibata-cursor-theme
 
 plasma-apply-lookandfeel --apply "$LookAndFeel"
 plasma-apply-desktoptheme "$DesktopTheme"
 plasma-apply-colorscheme "$ColorScheme"
 plasma-apply-cursortheme "$CursorTheme"
+
+wget -qO- https://git.io/papirus-folders-install | sh
