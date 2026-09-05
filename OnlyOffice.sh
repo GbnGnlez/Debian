@@ -1,7 +1,12 @@
 # https://github.com/ONLYOFFICE/DesktopEditors/releases/
 
-wget -O OnlyOffice.deb "https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb"
-sudo apt install --no-install-recommends --no-install-suggests ./OnlyOffice.deb -y
-rm OnlyOffice.deb
+INSTALLED_VER=$(onlyoffice-desktopeditors --version 2>&1 | grep -oP '\d+\.\d+\.\d+')
+LATEST_VER=$(curl -sI "https://github.com/ONLYOFFICE/DesktopEditors/releases/latest" | grep -oP '/v\K\d+\.\d+\.\d+')
 
-sudo apt install --no-install-recommends --no-install-suggests ttf-mscorefonts-installer -y
+if [ "$INSTALLED_VER" != "$LATEST_VER" ]; then
+    wget -O OnlyOffice.deb "https://github.com/ONLYOFFICE/DesktopEditors/releases/latest/download/onlyoffice-desktopeditors_amd64.deb"
+    sudo apt install --no-install-recommends --no-install-suggests ./OnlyOffice.deb ttf-mscorefonts-installer -y
+    rm -f OnlyOffice.deb
+else
+    echo "OnlyOffice is already the newest version ($INSTALLED_VER)."
+fi
