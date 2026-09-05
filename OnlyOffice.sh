@@ -10,3 +10,5 @@ if [ "$INSTALLED_VER" != "$LATEST_VER" ]; then
 else
 	echo "OnlyOffice is already the newest version ($INSTALLED_VER)."
 fi
+
+onlyoffice-desktopeditors --system-title-bar
