@@ -10,7 +10,8 @@ git config --global user.email "GbnGnlez@outlook.com"
 mkdir -p ~/.config/Code/User
 cat > ~/.config/Code/User/settings.json <<'EOF'
 {
-    "git.enableSmartCommit": true
+    "git.enableSmartCommit": true,
         "editor.formatOnSave": true
 }
 EOF
+ 
