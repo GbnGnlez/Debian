@@ -1,11 +1,11 @@
 # https://code.visualstudio.com/Download/
 
 if ! code -v > /dev/null 2>&1; then
-    wget -O VSCode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
-    sudo apt install --no-install-recommends --no-install-suggests ./VSCode.deb shfmt -y
-    rm -f VSCode.deb
+	wget -O VSCode.deb "https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64"
+	sudo apt install --no-install-recommends --no-install-suggests ./VSCode.deb shfmt -y
+	rm -f VSCode.deb
 else
-    sudo apt install --no-install-recommends --no-install-suggests code shfmt -y
+	sudo apt install --no-install-recommends --no-install-suggests code shfmt -y
 fi
 
 git config --global user.name "GbnGnlez"
@@ -20,7 +20,3 @@ cat > ~/.config/Code/User/settings.json << 'EOF'
 EOF
 
 shfmt -w -s -bn -ci -sr -fn .
-
-
-
-
