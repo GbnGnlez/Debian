@@ -2,8 +2,8 @@
 ./OnlyOffice.sh
 
 case $1 in
-  ThinkPad)   ./Plasma.sh Dark Blue; ./Spotify.sh ;;
-  Pavilion)   ./Plasma.sh Light Pink; ./Spotify.sh ;;
-  IdeaPad)    ./Plasma.sh Dark Pink ;;
-  IdeaCentre) ./Plasma.sh Light Pink ;;
+  ThinkPad)   ./Plasma.sh Dark; ./Spotify.sh ;;
+  Pavilion)   ./Plasma.sh Light; ./Spotify.sh ;;
+  IdeaPad)    ./Plasma.sh Dark ;;
+  IdeaCentre) ./Plasma.sh Light ;;
 esac
