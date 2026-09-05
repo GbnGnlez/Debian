@@ -4,7 +4,6 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   dolphin \
   firefox-esr \
   kde-spectacle \
-  kdeconnect \
   konsole \
   plasma-desktop \
   kde-config-sddm \
