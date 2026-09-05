@@ -42,6 +42,8 @@ INSTALLED_VER=$(papirus-folders --version 2>&1 | grep -oP '[0-9.]+')
 LATEST_VER=$(curl -sI "https://github.com/PapirusDevelopmentTeam/papirus-folders/releases/latest" | grep -oP 'tag/v\K[0-9.]+')
 if [ "$INSTALLED_VER" != "$LATEST_VER" ]; then
 	wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/install.sh | sh &> /dev/null
+else
+	echo "Papirus-Folders is already the newest version ($INSTALLED_VER)."
 fi
 papirus-folders --color "$2"
 kwriteconfig6 --file kdeglobals --group Icons --key Theme Papirus-"$1"
