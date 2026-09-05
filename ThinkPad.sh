@@ -4,4 +4,3 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   systemsettings \
   konsole \
   kscreen
-  

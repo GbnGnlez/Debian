@@ -15,8 +15,8 @@ case "$1" in
 esac
 
 case "$2" in
-    blue)  AccentColor="61,174,233";;
-    pink)  AccentColor="233,58,154";;
+  blue) AccentColor="61,174,233" ;;
+  pink) AccentColor="233,58,154" ;;
 esac
 
 sudo apt install --no-install-recommends --no-install-suggests -y \
