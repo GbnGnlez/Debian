@@ -9,6 +9,5 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   plasma-nm \
   plasma-pa \
   powerdevil \
-  sddm-theme-breeze \
   sddm \
   wireplumber
