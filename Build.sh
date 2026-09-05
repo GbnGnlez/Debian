@@ -1,3 +1,4 @@
+sudo cp ./grub /etc/default/grub 
 sudo cp ./sources.list /etc/apt/sources.list
 
 ./DesktopEnvironment.sh

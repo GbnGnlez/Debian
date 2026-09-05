@@ -53,3 +53,7 @@ plasma-apply-cursortheme "$CursorTheme"
 
 # Splash Screen
 kwriteconfig6 --file ksplashrc --group KSplash --key Theme None
+
+# Boot Splash Screen
+sudo plymouth-set-default-theme breeze
+sudo update-grub
