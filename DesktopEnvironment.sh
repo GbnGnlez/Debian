@@ -11,5 +11,4 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   powerdevil \
   sddm \
   wireplumber \
-  xdg-desktop-portal \
   xdg-desktop-portal-kde
