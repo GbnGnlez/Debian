@@ -24,3 +24,4 @@ plasma-apply-colorscheme "$ColorScheme"
 plasma-apply-cursortheme "$CursorTheme"
 
 wget -qO- https://git.io/papirus-folders-install | sh
+papirus-folders --color "$2"
