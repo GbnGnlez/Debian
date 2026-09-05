@@ -37,7 +37,7 @@ kwriteconfig6 --file kdeglobals --group General --key AccentColor "$AccentColor"
 
 # Icons
 kwriteconfig6 --file kdeglobals --group Icons --key Theme Papirus-"$1"
-wget -qO- https://git.io/papirus-folders-install | sh
+wget -qO- https://raw.githubusercontent.com/PapirusDevelopmentTeam/papirus-folders/master/install.sh | sh
 papirus-folders --color "$2"
 
 # Cursors

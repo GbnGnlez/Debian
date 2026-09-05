@@ -8,11 +8,10 @@ Pkgs="dists/stable/non-free/binary-amd64/Packages"
 Repo="pool/non-free/s/spotify-client/spotify-client"
 Version=$(wget -qO- "${URL}${Pkgs}" | awk -F_ '/spotify-client_/ {print $2}')
 
-
 if [ "$INSTALLED_VER" != "$Version" ]; then
-    wget -O Spotify.deb "${URL}${Repo}_${Version}_amd64.deb"
-    sudo apt install --no-install-recommends --no-install-suggests ./Spotify.deb -y
-    rm Spotify.deb
-    else
-    echo "Spotify is already the newest version ($INSTALLED_VER)."
+	wget -O Spotify.deb "${URL}${Repo}_${Version}_amd64.deb"
+	sudo apt install --no-install-recommends --no-install-suggests ./Spotify.deb -y
+	rm Spotify.deb
+else
+	echo "Spotify is already the newest version ($INSTALLED_VER)."
 fi
