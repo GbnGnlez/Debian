@@ -11,4 +11,5 @@ sudo apt install --no-install-recommends --no-install-suggests -y \
   plasma-nm \
   plasma-pa \
   powerdevil \
+  wireplumber \
   sddm
