@@ -1,6 +1,8 @@
 ./DesktopEnvironment.sh
 ./OnlyOffice.sh
 
+sudo cp ./sources.list /etc/apt/sources.list
+
 case "$1" in
   ThinkPad)
     ./ThinkPad.sh
